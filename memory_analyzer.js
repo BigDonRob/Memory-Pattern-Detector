@@ -631,7 +631,7 @@ function exportCSV() {
     rows.forEach(r => {
         csv += `${r.address},${fmtHex(r.value,r.width)},${fmtHex(r.previousValue,r.width)},${fmtHex(r.xor,r.width)},${r.dir},"${r.detail}"\n`;
     });
-    dl(csv, originalFilename.replace(/\.csv$/i, '') + `_${cat.id}.csv`, 'text/csv');
+    dl(csv, originalFilename.replace(/\.csv$/i, '') + `_${cat.id}.csv`, 'text/plain;charset=utf-8');
 }
 
 // ── Utilities ─────────────────────────────────────────────────────────────────
