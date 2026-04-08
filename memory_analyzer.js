@@ -25,23 +25,25 @@ const CATS = [
 const INSTRUCTIONS = {
     quick: {
         steps: [
-            { n: 1, text: 'Search <code>== Last Value</code> in the Memory Inspector to initialize the address pool.' },
+            { n: 1, text: '<strong>New Search</strong> and the first <code>== Last Value</code> filter sets the <strong>Initial Values</strong>. Use this to initialize the address pool.' },
             { n: 2, text: 'Perform actions <strong>unrelated</strong> to your target. Re-scan <code>== Last Value</code> every few seconds to filter out noise.' },
             { n: 3, text: 'Trigger the event that should change your target fields.' },
             { n: 4, text: 'Search <code>!= Last Value</code> <strong>once</strong>.' },
             { n: 5, text: 'Perform actions <strong>unrelated</strong> to your target. Re-scan <code>== Last Value</code> every few seconds to filter out noise.' },
-            { n: 6, hl: true, text: 'Load the exported CSV here and click Analyze.' },
+            { n: 6, text: '<strong>Ensure the state during export contains different Current Values than Initial Values</strong> for accurate results.' },
+            { n: 7, hl: true, text: 'Load the exported CSV here and click Analyze.' },
         ],
         note: 'Every address in the export already changed. The detector classifies what kind of change occurred. <span style="color:var(--c-set)">Green</span> = bit set. <span style="color:var(--c-clear)">Red</span> = bit cleared. <span style="color:var(--c-swap)">Orange</span> = bit swap (equal exchange).',
     },
     mass: {
         steps: [
-            { n: 1, text: 'Search <code>== Last Value</code> in the Memory Inspector to initialize the address pool.' },
+            { n: 1, text: '<strong>New Search</strong> and the first <code>== Last Value</code> filter sets the <strong>Initial Values</strong>. Use this to initialize the address pool.' },
             { n: 2, text: 'Perform actions <strong>unrelated</strong> to your target. Re-scan <code>== Last Value</code> every few seconds to filter out noise.' },
             { n: 3, text: 'Trigger the event the expected number of times (e.g. open 12 chests, unlock 7 abilities).' },
             { n: 4, text: 'Search <code>!= Last Value</code> <strong>once</strong>.' },
             { n: 5, text: 'Perform actions <strong>unrelated</strong> to your target. Re-scan <code>== Last Value</code> every few seconds to filter out noise.' },
-            { n: 6, hl: true, text: 'Load the exported CSV, enter expected count ± tolerance, then Analyze.' },
+            { n: 6, text: '<strong>Ensure the state during export contains different Current Values than Initial Values</strong> for accurate results.' },
+            { n: 7, hl: true, text: 'Load the exported CSV, enter expected count ± tolerance, then Analyze.' },
         ],
         note: 'All bit flips across addresses in a cluster are summed (popcount of XOR). Clusters whose total matches your expected count ± tolerance are flagged. <span style="color:var(--c-set)">Green</span> = bits set. <span style="color:var(--c-clear)">Red</span> = bits cleared. <span style="color:var(--c-swap)">Orange</span> = bits swapped (equal exchange).',
     },
